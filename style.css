@@ -1,0 +1,132 @@
+/* Reset default styling */
+* {
+ margin: 0;
+ padding: 0;
+ box-sizing: border-box;
+}
+
+/* Body Styling */
+body {
+ font-family: 'Arial', sans-serif;
+ background: linear-gradient(135deg, #141e30, #243b55); /* Dark blue background */
+ background-size: 400% 400%;
+ animation: gradientAnimation 15s ease infinite;
+ display: flex;
+ justify-content: center;
+ align-items: center;
+ height: 100vh;
+ color: #f0f0f0;
+}
+
+/* Gradient Animation */
+@keyframes gradientAnimation {
+ 0% { background-position: 0% 50%; }
+ 50% { background-position: 100% 50%; }
+ 100% { background-position: 0% 50%; }
+}
+
+/* Container with Glassmorphism Effect */
+.container {
+ z-index: 99;
+ background: rgba(255, 255, 255, 0.1);
+ border-radius: 15px;
+ box-shadow: 0 8px 32px rgba(0, 0, 0, 0.37);
+ backdrop-filter: blur(10px);
+ -webkit-backdrop-filter: blur(10px);
+ border: 1px solid rgba(255, 255, 255, 0.18);
+ padding: 30px;
+ text-align: center;
+ color: #ffffff;
+ width: 350px;
+ transition: transform 0.3s, box-shadow 0.3s;
+}
+
+/* Container Hover Effect */
+.container:hover {
+ transform: scale(1.05);
+ box-shadow: 0 12px 40px rgba(0, 0, 0, 0.5);
+}
+
+/* Header Styling */
+h1 {
+ font-size: 28px;
+ margin-bottom: 20px;
+ color: #00c6ff; /* Light cyan */
+ text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+/* Input Section Styling */
+.input-section {
+ margin-bottom: 25px;
+}
+
+.input-section input {
+ padding: 12px;
+ width: calc(70% - 24px);
+ margin-right: 10px;
+ border: 2px solid rgba(255, 255, 255, 0.3);
+ border-radius: 10px;
+ background: rgba(255, 255, 255, 0.2);
+ color: #ffffff;
+ font-size: 14px;
+ outline: none;
+ backdrop-filter: blur(4px);
+ -webkit-backdrop-filter: blur(4px);
+ transition: background-color 0.3s, border-color 0.3s;
+}
+
+.input-section input::placeholder {
+ color: rgba(0, 0, 0, 1)
+}
+
+.input-section input:focus {
+ background: rgba(255, 255, 255, 0.3);
+ border-color: #00c6ff;
+}
+
+/* Button Styling */
+.input-section button {
+ padding: 12px 18px;
+ border: none;
+ background-color: #00c6ff;
+ color: #141e30;
+ cursor: pointer;
+ border-radius: 10px;
+ font-weight: bold;
+ transition: background-color 0.3s, transform 0.3s;
+}
+
+.input-section button:hover {
+ background-color: #243b55; /* Darker shade for contrast */
+ color: #00c6ff;
+ transform: scale(1.1);
+}
+
+/* Result Section Styling */
+.result {
+ font-size: 18px;
+ margin-top: 15px;
+}
+
+.result p {
+ margin: 10px 0;
+ color: #e0e0e0;
+ font-size: 20px;
+}
+
+/* Country Name Styling */
+#country-name {
+ font-size: 24px;
+ font-weight: bold;
+ margin-bottom: 10px;
+ color: #00c6ff;
+ text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+/* Media Query for Mobile Responsiveness */
+@media (max-width: 600px) {
+ .container {
+     width: 90%;
+ }
+}
+
